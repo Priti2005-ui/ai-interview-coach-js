@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Interview Coach</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Interview Coach</h1>
+
+        <p class="subtitle">
+            Practice your interview with Generative AI
+        </p>
+
+        <!-- Job Role -->
+        <div class="form-box">
+
+            <label for="jobRole">
+                Enter Job Role
+            </label>
+
+            <input
+                type="text"
+                id="jobRole"
+                placeholder="e.g. MERN Stack Developer"
+            >
+
+            <button id="generateBtn">
+                Generate Question
+            </button>
+
+        </div>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            Generating question...
+        </div>
+
+
+        <!-- Question -->
+        <div id="result" class="result hidden">
+
+            <h2>AI Interview Question</h2>
+    
+            <p id="questionCounter" class="question-counter">
+                Question 1 / 5
+            </p>
+
+            <p id="question"></p>
+
+        </div>
+
+
+        <!-- Answer -->
+        <div id="answerSection" class="answer-section hidden">
+
+            <h2>Your Answer</h2>
+
+            <textarea
+                id="answer"
+                placeholder="Write your interview answer here..."
+                rows="8"
+            ></textarea>
+
+            <button id="evaluateBtn">
+                Evaluate My Answer
+            </button>
+
+        </div>
+
+
+        <!-- Evaluation -->
+        <div id="evaluation" class="evaluation hidden">
+
+            <h2>AI Evaluation</h2>
+
+            <p>
+                <strong>Score:</strong>
+                <span id="score"></span>/10
+            </p>
+
+            <h3>Strengths</h3>
+            <ul id="strengths"></ul>
+
+            <h3>Weaknesses</h3>
+            <ul id="weaknesses"></ul>
+
+            <h3>Suggestions</h3>
+            <p id="suggestions"></p>
+
+            <button id="nextQuestionBtn">
+               Next Question
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
